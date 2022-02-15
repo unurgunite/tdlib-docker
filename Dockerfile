@@ -9,3 +9,5 @@ RUN CXXFLAGS="-stdlib=libc++" CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -DCMA
 RUN cmake --build . --target install
 RUN ls -l /td/tdlib
 RUN mkdir /libtdjson
+CMD ["cp", "-L", "/td/tdlib/lib/libtdjson.so", "/libtdjson"]
+
