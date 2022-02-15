@@ -18,8 +18,7 @@ Now you can find your compiled version of TDLib in `$HOME/libtdjson/libtdjson.so
 
 ## Contribution
 
-Contribute to the project development always welcome! You will need to fork this project then create new branch and push changes to the repository.
+Contribute to the project development always welcome! You will need to fork this project then create new branch and push changes to the repository. Bug reports and pull requests are welcome on GitHub at https://github.com/unurgunite/tdlib-docker.
 
 [1]:https://github.com/unurgunite/tdlib-docker#usage
 [2]:https://github.com/unurgunite/tdlib-docker#contribution
-
