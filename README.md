@@ -10,8 +10,8 @@ There are several easy steps to build source code:
 ```sh
 cd $HOME && \
 git clone https://github.com/unurgunite/tdlib-docker.git && \
-cd ~/tdlib-docker && \
-docker build --tag=unurgunite/tdlib-docker && \
+cd tdlib-docker && \
+docker build . --tag=unurgunite/tdlib-docker && \
 docker run --rm -v $HOME/libtdjson:/libtdjson unurgunite/tdlib-docker
 ```
 Now you can find your compiled version of TDLib in `$HOME/libtdjson/libtdjson.so`
