@@ -6,7 +6,7 @@ RUN apt install -yqq make git zlib1g-dev libssl-dev gperf php-cli cmake clang li
 RUN git clone https://github.com/tdlib/td.git
 WORKDIR /td/build
 RUN CXXFLAGS="-stdlib=libc++" CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=../tdlib ..
-RUN cmake --build . --target install
+RUN cmake --build . --parallel $(expr `nproc` - 1) --target install
 RUN ls -l /td/tdlib
 RUN mkdir /libtdjson
 CMD ["cp", "-L", "/td/tdlib/lib/libtdjson.so", "/libtdjson"]
